@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +9,79 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.transparent-table {
+  background-color: transparent !important; /* Fundo transparente */
+  border: none !important; /* Remove bordas */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transparent-table .p-datatable-header {
+  background-color: transparent !important; /* Cabeçalho transparente */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.transparent-table .p-datatable-tbody > tr {
+  background-color: transparent !important; /* Linhas transparentes */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória */
 }
 
-.card {
-  padding: 2em;
+.transparent-table .p-datatable-tbody > tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05) !important; /* Alterna linhas com leve transparência */
 }
 
-.read-the-docs {
-  color: #888;
+.transparent-table .p-datatable-tbody > tr:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* Destaque ao passar o mouse */
+}
+
+.transparent-table .p-datatable-thead > tr > th {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória */
+}
+
+.transparent-table .p-paginator {
+  background-color: transparent !important; /* Cabeçalho transparente */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura da tela inteira */
+  /* background-color: #f4f4f4; Cor de fundo opcional */
+  background-image: url('../assets/loginImage.png');
+  background-size: 100% auto;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-card {
+  height: 300px;
+  width: 350px; /* Largura fixa do card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o card */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem; /* Espaçamento inferior para a mensagem de erro */
+}
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Ajusta a altura para ocupar toda a tela */
+  width: 60vw;
+  background-color: #f9f9f9; /* Cor de fundo */
+}
+
+.register-card {
+  width: 400px; /* Ajuste a largura conforme necessário */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  margin-bottom: 1.5rem; /* Espaçamento entre os campos */
+}
+
+.success-message {
+  color: green; /* Estilo para a mensagem de sucesso */
+  margin-bottom: 1rem;
 }
