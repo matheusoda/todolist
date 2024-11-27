@@ -1,6 +1,7 @@
 const UserService = require("../services/userService.js");
 
 const { z } = require("zod");
+const BadRequestError = require("../utils/erros.js");
 
 async function getUsers(req, res) {
     try {
@@ -33,6 +34,9 @@ async function createUser(req, res) {
         );
         res.status(201).json(createdUser);
     } catch (error) {
+        if (error instanceof BadRequestError) {
+            return res.status(error.statusCode).json({ error: error.message });
+        }
         res.status(500).json({
             error: "Erro ao criar o usuário",
             error: error.message
