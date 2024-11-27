@@ -73,7 +73,7 @@ const TaskForm = ({ onTaskAdded }) => {
                 onChange={(e) =>
                     setTask({ ...task, description: e.target.value })
                 }
-                className="mr-2 text-black h-8"
+                className="mr-2 pl-2 text-black h-8"
             />
             <InputText
                 // required
@@ -82,7 +82,7 @@ const TaskForm = ({ onTaskAdded }) => {
                 onChange={(e) =>
                     setTask({ ...task, responsable: e.target.value })
                 }
-                className="mr-2 text-black h-8"
+                className="mr-2 pl-2 text-black h-8"
             />
             <Dropdown
                 value={task.status}

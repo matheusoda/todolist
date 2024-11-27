@@ -139,7 +139,7 @@ export default function SidebarComponent({ children }) {
                                                 w-full
                                             "
                                         >
-                                            <i className="pi pi-calendar-clock mr-2 mt-[0.15rem]"></i>
+                                            <i className="pi pi-users mr-2 mt-[0.15rem]"></i>
                                             {expanded && <span className="font-medium">Usuários</span>}
                                         </a>
                                     </li> 

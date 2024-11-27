@@ -22,8 +22,8 @@ function HomePage() {
 
     return (
         <>
-                <TaskForm onTaskAdded={fetchTasks} />
-                <TaskList tasks={tasks} />
+            <TaskForm onTaskAdded={fetchTasks} />
+            <TaskList tasks={tasks} />
         </>
     );
 }

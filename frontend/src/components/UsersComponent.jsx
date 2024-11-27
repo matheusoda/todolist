@@ -20,6 +20,7 @@ export default function UsersComponent() {
                 email,
                 name,
                 password,
+                isAdmin: true,
             }, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
